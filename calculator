@@ -1,0 +1,56 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        System.out.println("---------------------");
+        System.out.println("    DEVCALCULATOR    ");
+        System.out.println("---------------------");
+        System.out.println("1 - ADIÇÃO");
+        System.out.println("2 - SUBTRAÇÃO");
+        System.out.println("3 - DIVISÃO");
+        System.out.println("4 - MULTIPLICAÇÃO");
+        System.out.println("");
+        System.out.print("ESCOLHA SUA OPERAÇÃO: ");
+        Scanner escolha = new Scanner(System.in);
+        int esc = escolha.nextInt();
+        if (esc == 1){
+            System.out.print("DIGITE UM NÚMERO: ");
+            Scanner soma1 = new Scanner(System.in);
+            double s1 = soma1.nextDouble();
+            System.out.print("DIGITE OUTRO NÚMERO: ");
+            Scanner soma2 = new Scanner(System.in);
+            double s2 = soma2.nextDouble();
+            double resultadoSoma = s1+s2;
+            System.out.println("O RESULTADO DE "+s1+" + "+s2+" É IGUAL A "+resultadoSoma);
+        } else if (esc == 2){
+            System.out.print("DIGITE UM NÚMERO: ");
+            Scanner sub1 = new Scanner(System.in);
+            double su1 = sub1.nextDouble();
+            System.out.print("DIGITE OUTRO NÚMERO: ");
+            Scanner sub2 = new Scanner(System.in);
+            double su2 = sub2.nextDouble();
+            double resultadoSub = su1-su2;
+            System.out.println("O RESULTADO DE "+su1+" - "+su2+" É "+resultadoSub);
+        } else if (esc == 3){
+            System.out.print("DIGITE UM NÚMERO: ");
+            Scanner div1 = new Scanner(System.in);
+            double d1 = div1.nextDouble();
+            System.out.print("DIGITE OUTRO NÚMERO: ");
+            Scanner div2 = new Scanner(System.in);
+            double d2 = div2.nextDouble();
+            double resultadoDiv = d1/d2;
+            System.out.println("O RESULTADO DE "+d1+" / "+d2+" É "+resultadoDiv);
+        } else if (esc == 4){
+            System.out.print("DIGITE UM NÚMERO: ");
+            Scanner mult1 = new Scanner(System.in);
+            double m1 = mult1.nextDouble();
+            System.out.print("DIGITE OUTRO NÚMERO: ");
+            Scanner mult2 = new Scanner(System.in);
+            double m2 = mult2.nextDouble();
+            double resultadoMult = m1*m2;
+            System.out.println("O RESULTADO DE "+m1+" * "+m2+" É "+resultadoMult);
+        }else{
+            System.out.println("OPÇÃO INVÁLIDA, REINICIE O PROGRAMA E ESCOLHA DE 1 A 4!!!");
+        }
+    }
+}
